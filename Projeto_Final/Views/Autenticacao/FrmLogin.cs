@@ -19,7 +19,7 @@ namespace ProjetoFinal.Views.Autenticacao
         {
             try
             {
-                string codigo = txtCodigo.Text.Trim();
+                string codigo = txtCodigo.Text.Trim();//algo para dar push
                 string pin = txtPIN.Text.Trim();
 
                 bool comSucesso = _presenter.AuthenticateOrRegister(codigo, pin, () =>
