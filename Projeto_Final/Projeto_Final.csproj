@@ -10,7 +10,6 @@
 
   <ItemGroup>
     <Folder Include="Views\Conversas\" />
-    <Folder Include="Views\Contatos\" />
   </ItemGroup>
 
   <ItemGroup>
