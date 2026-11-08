@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using ProjetoFinal;
 using ProjetoFinal.Presenters;
+using ProjetoFinal.Views.Contatos;
 
 namespace ProjetoFinal.Views.Autenticacao
 {
@@ -35,7 +36,9 @@ namespace ProjetoFinal.Views.Autenticacao
 
                 if (comSucesso)
                 {
-                    MessageBox.Show($"Bem-vindo! Logado como ID: {Session.UsuarioAtual?.Id}", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    var frmListar = new FrmListar();
+                    frmListar.Show();
+                    this.Hide();
                 }
             }
             catch (Exception ex)
