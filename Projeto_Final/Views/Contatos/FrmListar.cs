@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Windows.Forms;
 using ProjetoFinal.Presenters;
-namespace Projeto_Final.Views.Contatos
+namespace ProjetoFinal.Views.Contatos
 {
     public partial class FrmListar : Form
     {
@@ -23,7 +23,7 @@ namespace Projeto_Final.Views.Contatos
             {
                 var lista = _presenter.ObterContatosDoUsuarioAtual();
 
-                // Formata os dados para exibição amigável na DataGridView
+                
                 dgvContatos.DataSource = lista.Select(c => new
                 {
                     ID = c.Id,

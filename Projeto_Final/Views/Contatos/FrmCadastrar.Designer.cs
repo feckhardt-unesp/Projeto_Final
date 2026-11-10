@@ -28,12 +28,86 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FrmCadastrar";
+            lblCodigo = new Label();
+            lblApelido = new Label();
+            txtCodigo = new TextBox();
+            txtApelido = new TextBox();
+            btSalvar = new Button();
+            SuspendLayout();
+            // 
+            // lblCodigo
+            // 
+            lblCodigo.AutoSize = true;
+            lblCodigo.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblCodigo.Location = new Point(12, 9);
+            lblCodigo.Name = "lblCodigo";
+            lblCodigo.Size = new Size(175, 25);
+            lblCodigo.TabIndex = 0;
+            lblCodigo.Text = "Código do Usuário:";
+            // 
+            // lblApelido
+            // 
+            lblApelido.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            lblApelido.AutoSize = true;
+            lblApelido.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblApelido.Location = new Point(12, 100);
+            lblApelido.Name = "lblApelido";
+            lblApelido.Size = new Size(167, 25);
+            lblApelido.TabIndex = 2;
+            lblApelido.Text = "Nome do Usuário:";
+            // 
+            // txtCodigo
+            // 
+            txtCodigo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtCodigo.Location = new Point(12, 51);
+            txtCodigo.Name = "txtCodigo";
+            txtCodigo.Size = new Size(242, 23);
+            txtCodigo.TabIndex = 1;
+            // 
+            // txtApelido
+            // 
+            txtApelido.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtApelido.Location = new Point(12, 146);
+            txtApelido.Name = "txtApelido";
+            txtApelido.Size = new Size(242, 23);
+            txtApelido.TabIndex = 3;
+            // 
+            // btSalvar
+            // 
+            btSalvar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btSalvar.BackColor = Color.YellowGreen;
+            btSalvar.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btSalvar.Location = new Point(74, 222);
+            btSalvar.Name = "btSalvar";
+            btSalvar.Size = new Size(113, 37);
+            btSalvar.TabIndex = 4;
+            btSalvar.Text = "SALVAR";
+            btSalvar.UseVisualStyleBackColor = false;
+            btSalvar.Click += btSalvar_Click;
+            // 
+            // FrmCadastrar
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(279, 271);
+            Controls.Add(btSalvar);
+            Controls.Add(txtApelido);
+            Controls.Add(txtCodigo);
+            Controls.Add(lblApelido);
+            Controls.Add(lblCodigo);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Name = "FrmCadastrar";
+            Text = "FrmCadastrar";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label lblCodigo;
+        private Label lblApelido;
+        private TextBox txtCodigo;
+        private TextBox txtApelido;
+        private Button btSalvar;
     }
 }
