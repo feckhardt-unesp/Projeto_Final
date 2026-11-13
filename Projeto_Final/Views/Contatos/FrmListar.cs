@@ -12,7 +12,7 @@ namespace ProjetoFinal.Views.Contatos
         public FrmListar()
         {
             InitializeComponent();
-            _presenter = new ContatoPresenter();
+            _presenter = new ContatoPresenter();//algo para dar push
 
 
             CarregarContatos();
