@@ -1,24 +1,32 @@
-﻿using ProjetoFinal;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
 using ProjetoFinal.Data;
 using ProjetoFinal.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ProjetoFinal.Presenters
 {
     public class ContatoPresenter
     {
-        public List<Contato> ObterContatosDoUsuarioAtual()
+        public List<Contato> ObterContatosDoUsuarioAtual(string filtro = "")
         {
             if (Session.UsuarioAtual == null)
                 throw new Exception("Nenhum usuário autenticado na sessão.");
 
             using var db = new Contexto();
-            return db.Contatos
-                     .Include(c => c.UsuarioContato)
-                     .Where(c => c.UsuarioId == Session.UsuarioAtual.Id)
-                     .ToList();
+            var query = db.Contatos
+                          .Include(c => c.UsuarioContato)
+                          .Where(c => c.UsuarioId == Session.UsuarioAtual.Id);
+
+            if (!string.IsNullOrWhiteSpace(filtro))
+            {
+                string termo = filtro.ToLower();
+                query = query.Where(c => c.Nome.ToLower().Contains(termo) ||
+                                         (c.UsuarioContato != null && c.UsuarioContato.Codigo.ToLower().Contains(termo)));
+            }
+
+            return query.ToList();
         }
 
         public void AdicionarContato(string codigoContato, string apelido)
@@ -31,7 +39,6 @@ namespace ProjetoFinal.Presenters
 
             using var db = new Contexto();
 
-         
             var usuarioAlvo = db.Usuarios.FirstOrDefault(u => u.Codigo == codigoContato);
             if (usuarioAlvo == null)
                 throw new Exception("Usuário com esse código não foi encontrado.");
@@ -70,7 +77,6 @@ namespace ProjetoFinal.Presenters
             db.SaveChanges();
         }
 
-        // Remover :-:
         public void ExcluirContato(int contatoId)
         {
             using var db = new Contexto();

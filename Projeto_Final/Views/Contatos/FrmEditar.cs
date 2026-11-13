@@ -1,13 +1,8 @@
-﻿using ProjetoFinal.Presenters;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
+﻿using System;
 using System.Windows.Forms;
+using ProjetoFinal.Presenters;
 
-namespace Projeto_Final.Views.Contatos
+namespace ProjetoFinal.Views.Contatos
 {
     public partial class FrmEditar : Form
     {
@@ -24,14 +19,14 @@ namespace Projeto_Final.Views.Contatos
             txtNovoApelido.Text = nomeAtual;
         }
 
-        private void btnSalvar_Click(object sender, EventArgs e)
+        private void SalvarAlteracao()
         {
             try
             {
                 string novoApelido = txtNovoApelido.Text.Trim();
                 _presenter.EditarContato(_contatoId, novoApelido);
 
-                MessageBox.Show("Apelido atualizado!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Nome do contato atualizado!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 _frmListar.CarregarContatos();
                 this.Close();
             }
@@ -39,6 +34,11 @@ namespace Projeto_Final.Views.Contatos
             {
                 MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            SalvarAlteracao();
         }
     }
 }

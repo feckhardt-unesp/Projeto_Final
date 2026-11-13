@@ -2,14 +2,23 @@
 using System.Linq;
 using System.Windows.Forms;
 using ProjetoFinal.Presenters;
+
 namespace ProjetoFinal.Views.Contatos
 {
     public partial class FrmListar : Form
     {
+        private readonly ContatoPresenter _presenter;
+
         public FrmListar()
         {
             InitializeComponent();
             _presenter = new ContatoPresenter();
+
+
+            CarregarContatos();
+
+
+            this.FormClosed += (s, e) => Application.Exit();
         }
 
         private void FrmListar_Load(object sender, EventArgs e)
@@ -17,13 +26,12 @@ namespace ProjetoFinal.Views.Contatos
             CarregarContatos();
         }
 
-        public void CarregarContatos()
+        public void CarregarContatos(string filtro = "")
         {
             try
             {
-                var lista = _presenter.ObterContatosDoUsuarioAtual();
+                var lista = _presenter.ObterContatosDoUsuarioAtual(filtro);
 
-                
                 dgvContatos.DataSource = lista.Select(c => new
                 {
                     ID = c.Id,
@@ -36,6 +44,8 @@ namespace ProjetoFinal.Views.Contatos
                 MessageBox.Show(ex.Message, "Erro ao carregar contatos", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
 
         private void btAdicionar_Click(object sender, EventArgs e)
         {
@@ -84,6 +94,10 @@ namespace ProjetoFinal.Views.Contatos
                 }
             }
         }
-        CarregarContatos();
+
+        private void btFiltrar_Click(object sender, EventArgs e)
+        {
+            CarregarContatos(txtNome.Text.Trim());
+        }
     }
 }

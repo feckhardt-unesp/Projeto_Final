@@ -1,4 +1,4 @@
-﻿namespace Projeto_Final.Views.Contatos
+﻿namespace ProjetoFinal.Views.Contatos
 {
     partial class FrmListar
     {
@@ -58,6 +58,7 @@
             btFiltrar.TabIndex = 1;
             btFiltrar.Text = "FILTRAR";
             btFiltrar.UseVisualStyleBackColor = false;
+            btFiltrar.Click += btFiltrar_Click;
             // 
             // txtNome
             // 
@@ -135,7 +136,7 @@
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "FrmListar";
-            Text = "FrmListar";
+            Text = "Lista dos Contatos";
             ((System.ComponentModel.ISupportInitialize)dgvContatos).EndInit();
             ResumeLayout(false);
             PerformLayout();

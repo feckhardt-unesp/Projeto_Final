@@ -1,17 +1,15 @@
-﻿using ProjetoFinal.Presenters;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
+﻿using System;
 using System.Windows.Forms;
+using ProjetoFinal.Presenters;
 
-namespace Projeto_Final.Views.Contatos
+namespace ProjetoFinal.Views.Contatos
 {
     public partial class FrmCadastrar : Form
     {
-        public FrmCadastrar()
+        private readonly ContatoPresenter _presenter;
+        private readonly FrmListar _frmListar;
+
+        public FrmCadastrar(FrmListar frmListar)
         {
             InitializeComponent();
             _presenter = new ContatoPresenter();

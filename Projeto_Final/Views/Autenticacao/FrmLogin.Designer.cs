@@ -85,7 +85,7 @@
             MaximizeBox = false;
             Name = "FrmLogin";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Login - C#at";
+            Text = "Login da Conta";
             ResumeLayout(false);
             PerformLayout();
         }

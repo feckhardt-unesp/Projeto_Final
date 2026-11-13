@@ -1,4 +1,4 @@
-﻿namespace Projeto_Final.Views.Contatos
+﻿namespace ProjetoFinal.Views.Contatos
 {
     partial class FrmCadastrar
     {
@@ -52,9 +52,9 @@
             lblApelido.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblApelido.Location = new Point(12, 100);
             lblApelido.Name = "lblApelido";
-            lblApelido.Size = new Size(167, 25);
+            lblApelido.Size = new Size(171, 25);
             lblApelido.TabIndex = 2;
-            lblApelido.Text = "Nome do Usuário:";
+            lblApelido.Text = "Nome do Contato:";
             // 
             // txtCodigo
             // 

@@ -1,4 +1,4 @@
-﻿namespace Projeto_Final.Views.Contatos
+﻿namespace ProjetoFinal.Views.Contatos
 {
     partial class FrmEditar
     {
@@ -28,22 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btSalvar = new Button();
+            btnSalvar = new Button();
             lblNovoApelido = new Label();
             txtNovoApelido = new TextBox();
             SuspendLayout();
             // 
-            // btSalvar
+            // btnSalvar
             // 
-            btSalvar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            btSalvar.BackColor = Color.YellowGreen;
-            btSalvar.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btSalvar.Location = new Point(99, 147);
-            btSalvar.Name = "btSalvar";
-            btSalvar.Size = new Size(96, 37);
-            btSalvar.TabIndex = 5;
-            btSalvar.Text = "SALVAR";
-            btSalvar.UseVisualStyleBackColor = false;
+            btnSalvar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btnSalvar.BackColor = Color.YellowGreen;
+            btnSalvar.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSalvar.Location = new Point(99, 147);
+            btnSalvar.Name = "btnSalvar";
+            btnSalvar.Size = new Size(96, 37);
+            btnSalvar.TabIndex = 5;
+            btnSalvar.Text = "SALVAR";
+            btnSalvar.UseVisualStyleBackColor = false;
+            btnSalvar.Click += btnSalvar_Click;
             // 
             // lblNovoApelido
             // 
@@ -52,9 +53,9 @@
             lblNovoApelido.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblNovoApelido.Location = new Point(12, 31);
             lblNovoApelido.Name = "lblNovoApelido";
-            lblNovoApelido.Size = new Size(215, 25);
+            lblNovoApelido.Size = new Size(216, 25);
             lblNovoApelido.TabIndex = 6;
-            lblNovoApelido.Text = "Novo nome do Usuário:";
+            lblNovoApelido.Text = "Novo nome do contato:";
             // 
             // txtNovoApelido
             // 
@@ -71,7 +72,7 @@
             ClientSize = new Size(289, 196);
             Controls.Add(txtNovoApelido);
             Controls.Add(lblNovoApelido);
-            Controls.Add(btSalvar);
+            Controls.Add(btnSalvar);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Name = "FrmEditar";
             Text = "Editar Contato";
@@ -81,7 +82,7 @@
 
         #endregion
 
-        private Button btSalvar;
+        private Button btnSalvar;
         private Label lblNovoApelido;
         private TextBox txtNovoApelido;
     }
