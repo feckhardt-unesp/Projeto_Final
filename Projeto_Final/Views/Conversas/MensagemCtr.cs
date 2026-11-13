@@ -25,7 +25,8 @@ namespace ProjetoFinal.Views.Conversas
 
         private void InitializeComponent()
         {
-            lblNome = new Label { Location = new System.Drawing.Point(10, 5), AutoSize = true, Font = new System.Drawing.Font(Font, System.Drawing.FontStyle.Bold) };
+            lblNome = new Label { Location = new System.Drawing.Point(10, 5), AutoSize = true,
+                Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold)
             lblTexto = new Label { Location = new System.Drawing.Point(10, 25), AutoSize = true };
             lblDataHora = new Label { Location = new System.Drawing.Point(10, 50), AutoSize = true, ForeColor = System.Drawing.Color.Gray };
 

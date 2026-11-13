@@ -9,6 +9,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\Conversas\ContatoCtr.cs" />
+    <Compile Remove="Views\Conversas\ConversaCtr.cs" />
+    <Compile Remove="Views\Conversas\MensagemCtr.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Conversas\ContatoCtr.cs" />
+    <None Include="Views\Conversas\ConversaCtr.cs" />
+    <None Include="Views\Conversas\MensagemCtr.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="BCrypt.Net-Next" Version="4.2.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.14" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.3" />

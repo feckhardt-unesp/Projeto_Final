@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using ProjetoFinal.Views.Conversas.ContatoCtr;
 
 namespace ProjetoFinal.Views.Conversas
 {
