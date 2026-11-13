@@ -28,12 +28,61 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FrmEditar";
+            btSalvar = new Button();
+            lblNovoApelido = new Label();
+            txtNovoApelido = new TextBox();
+            SuspendLayout();
+            // 
+            // btSalvar
+            // 
+            btSalvar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btSalvar.BackColor = Color.YellowGreen;
+            btSalvar.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btSalvar.Location = new Point(99, 147);
+            btSalvar.Name = "btSalvar";
+            btSalvar.Size = new Size(96, 37);
+            btSalvar.TabIndex = 5;
+            btSalvar.Text = "SALVAR";
+            btSalvar.UseVisualStyleBackColor = false;
+            // 
+            // lblNovoApelido
+            // 
+            lblNovoApelido.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            lblNovoApelido.AutoSize = true;
+            lblNovoApelido.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblNovoApelido.Location = new Point(12, 31);
+            lblNovoApelido.Name = "lblNovoApelido";
+            lblNovoApelido.Size = new Size(215, 25);
+            lblNovoApelido.TabIndex = 6;
+            lblNovoApelido.Text = "Novo nome do Usuário:";
+            // 
+            // txtNovoApelido
+            // 
+            txtNovoApelido.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtNovoApelido.Location = new Point(12, 73);
+            txtNovoApelido.Name = "txtNovoApelido";
+            txtNovoApelido.Size = new Size(253, 23);
+            txtNovoApelido.TabIndex = 7;
+            // 
+            // FrmEditar
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(289, 196);
+            Controls.Add(txtNovoApelido);
+            Controls.Add(lblNovoApelido);
+            Controls.Add(btSalvar);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            Name = "FrmEditar";
+            Text = "Editar Contato";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Button btSalvar;
+        private Label lblNovoApelido;
+        private TextBox txtNovoApelido;
     }
 }
