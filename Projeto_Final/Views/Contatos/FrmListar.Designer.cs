@@ -79,6 +79,7 @@
             dgvContatos.MultiSelect = false;
             dgvContatos.Name = "dgvContatos";
             dgvContatos.ReadOnly = true;
+            dgvContatos.ScrollBars = ScrollBars.Vertical;
             dgvContatos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvContatos.Size = new Size(466, 164);
             dgvContatos.TabIndex = 0;
@@ -135,6 +136,7 @@
             Controls.Add(btFiltrar);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Name = "FrmListar";
             Text = "Lista dos Contatos";
             ((System.ComponentModel.ISupportInitialize)dgvContatos).EndInit();

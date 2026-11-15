@@ -96,6 +96,7 @@
             Controls.Add(lblApelido);
             Controls.Add(lblCodigo);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Name = "FrmCadastrar";
             Text = "Cadastrar Contato";
             ResumeLayout(false);

@@ -74,6 +74,7 @@
             Controls.Add(lblNovoApelido);
             Controls.Add(btnSalvar);
             FormBorderStyle = FormBorderStyle.FixedDialog;
+            MaximizeBox = false;
             Name = "FrmEditar";
             Text = "Editar Contato";
             ResumeLayout(false);

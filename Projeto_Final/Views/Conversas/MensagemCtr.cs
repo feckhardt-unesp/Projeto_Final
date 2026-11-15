@@ -12,7 +12,7 @@ namespace ProjetoFinal.Views.Conversas
         public MensagemCtr(string remetente, string texto, DateTime dataHora, bool ehUsuarioAtual)
         {
             InitializeComponent();
-            
+
             lblNome.Text = ehUsuarioAtual ? "Você:" : remetente;
             lblTexto.Text = $"\"{texto}\"";
             lblDataHora.Text = $"{dataHora:dd/MM/yyyy HH:mm}";
@@ -25,16 +25,34 @@ namespace ProjetoFinal.Views.Conversas
 
         private void InitializeComponent()
         {
-            lblNome = new Label { Location = new System.Drawing.Point(10, 5), AutoSize = true,
-                Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold)
-            lblTexto = new Label { Location = new System.Drawing.Point(10, 25), AutoSize = true };
-            lblDataHora = new Label { Location = new System.Drawing.Point(10, 50), AutoSize = true, ForeColor = System.Drawing.Color.Gray };
+            this.AutoScaleMode = AutoScaleMode.None;
+            this.Size = new System.Drawing.Size(335, 75);
+            this.BorderStyle = BorderStyle.FixedSingle;
 
-            Controls.Add(lblNome);
-            Controls.Add(lblTexto);
-            Controls.Add(lblDataHora);
-            Size = new System.Drawing.Size(350, 75);
-            BorderStyle = BorderStyle.FixedSingle;
+            lblNome = new Label
+            {
+                Location = new System.Drawing.Point(10, 6),
+                AutoSize = true,
+                Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold)
+            };
+
+            lblTexto = new Label
+            {
+                Location = new System.Drawing.Point(10, 26),
+                AutoSize = true,
+                MaximumSize = new System.Drawing.Size(315, 0)
+            };
+
+            lblDataHora = new Label
+            {
+                Location = new System.Drawing.Point(10, 52),
+                AutoSize = true,
+                ForeColor = System.Drawing.Color.Gray
+            };
+
+            this.Controls.Add(lblNome);
+            this.Controls.Add(lblTexto);
+            this.Controls.Add(lblDataHora);
         }
     }
 }

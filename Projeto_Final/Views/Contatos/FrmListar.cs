@@ -12,13 +12,8 @@ namespace ProjetoFinal.Views.Contatos
         public FrmListar()
         {
             InitializeComponent();
-            _presenter = new ContatoPresenter();//algo para dar push
-
-
+            _presenter = new ContatoPresenter();
             CarregarContatos();
-
-
-            this.FormClosed += (s, e) => Application.Exit();
         }
 
         private void FrmListar_Load(object sender, EventArgs e)
@@ -45,7 +40,10 @@ namespace ProjetoFinal.Views.Contatos
             }
         }
 
-
+        private void btFiltrar_Click(object sender, EventArgs e)
+        {
+            CarregarContatos(txtNome.Text.Trim());
+        }
 
         private void btAdicionar_Click(object sender, EventArgs e)
         {
@@ -93,11 +91,6 @@ namespace ProjetoFinal.Views.Contatos
                     MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-        }
-
-        private void btFiltrar_Click(object sender, EventArgs e)
-        {
-            CarregarContatos(txtNome.Text.Trim());
         }
     }
 }

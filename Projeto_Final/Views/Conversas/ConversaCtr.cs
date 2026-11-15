@@ -22,18 +22,38 @@ namespace ProjetoFinal.Views.Conversas
 
         private void InitializeComponent()
         {
-            lblNome = new Label { Location = new System.Drawing.Point(10, 15), AutoSize = true };
-            btnVer = new Button { Text = "Ver", Location = new System.Drawing.Point(140, 10), Width = 60 };
-            btnApagar = new Button { Text = "Apagar", Location = new System.Drawing.Point(210, 10), Width = 60 };
+            this.AutoScaleMode = AutoScaleMode.None;
+            this.Size = new System.Drawing.Size(272, 45);
+            this.BorderStyle = BorderStyle.FixedSingle;
+
+            lblNome = new Label
+            {
+                Location = new System.Drawing.Point(8, 14),
+                AutoSize = true,
+                MaximumSize = new System.Drawing.Size(125, 0),
+                AutoEllipsis = true
+            };
+
+            btnVer = new Button
+            {
+                Text = "Ver",
+                Location = new System.Drawing.Point(140, 10),
+                Size = new System.Drawing.Size(58, 25)
+            };
+
+            btnApagar = new Button
+            {
+                Text = "Apagar",
+                Location = new System.Drawing.Point(203, 10),
+                Size = new System.Drawing.Size(60, 25)
+            };
 
             btnVer.Click += (s, e) => OnVerClicked?.Invoke(this, EventArgs.Empty);
             btnApagar.Click += (s, e) => OnApagarClicked?.Invoke(this, EventArgs.Empty);
 
-            Controls.Add(lblNome);
-            Controls.Add(btnVer);
-            Controls.Add(btnApagar);
-            Size = new System.Drawing.Size(280, 45);
-            BorderStyle = BorderStyle.FixedSingle;
+            this.Controls.Add(lblNome);
+            this.Controls.Add(btnVer);
+            this.Controls.Add(btnApagar);
         }
     }
 }
