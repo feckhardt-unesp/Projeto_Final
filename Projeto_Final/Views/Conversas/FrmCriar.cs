@@ -89,7 +89,7 @@ namespace ProjetoFinal.Views.Conversas
             this.Controls.Add(lblNome);
             this.Controls.Add(txtNome);
             this.Controls.Add(cmbContatos);
-            this.Controls.Add(btnAdicionarContato);
+            this.Controls.Add(btnAdicionarContato);//algo para dar push
             this.Controls.Add(panelContatos);
             this.Controls.Add(btnCriar);
 
