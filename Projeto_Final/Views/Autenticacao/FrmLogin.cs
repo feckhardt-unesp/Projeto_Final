@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using ProjetoFinal;
 using ProjetoFinal.Presenters;
-using ProjetoFinal.Views.Contatos;
+using ProjetoFinal.Views.Conversas; 
 
 namespace ProjetoFinal.Views.Autenticacao
 {
@@ -20,7 +20,7 @@ namespace ProjetoFinal.Views.Autenticacao
         {
             try
             {
-                string codigo = txtCodigo.Text.Trim();//algo para dar push no git
+                string codigo = txtCodigo.Text.Trim();
                 string pin = txtPIN.Text.Trim();
 
                 bool comSucesso = _presenter.AuthenticateOrRegister(codigo, pin, () =>
@@ -36,8 +36,8 @@ namespace ProjetoFinal.Views.Autenticacao
 
                 if (comSucesso)
                 {
-                    var frmListar = new FrmListar();
-                    frmListar.Show();
+                    var frmListas = new FrmListas();
+                    frmListas.Show();
                     this.Hide();
                 }
             }
